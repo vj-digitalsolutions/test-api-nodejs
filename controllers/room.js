@@ -123,7 +123,7 @@ const updateRoom = async (req, res = response) => {
             });
         }
 
-        if(req.body.room_type.status() != "A" && req.body.room_type.status() != "I"){
+        if(req.body.status != "A" && req.body.status != "I"){
             return res.status(400).json({
                 ok:false,
                 msg: 'El estado de habitación es incorrecto, solo puede ser A -> Activo o I -> Inactivo'
